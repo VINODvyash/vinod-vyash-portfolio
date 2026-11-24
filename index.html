@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Vinod Vyash — QA, Python, Django, and software testing projects.">
+  <title>Vinod Vyash | QA & Python Portfolio</title>
+  <style>
+    :root {
+      --bg: #0b1020; --panel: #111a2e; --panel2: #15213a; --text: #eef3ff;
+      --muted: #a9b6ce; --line: #263552; --accent: #8ce0d1; --accent2: #b6c5ff;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: radial-gradient(ellipse at 80% 0%, #1b2c4a 0, var(--bg) 42%);
+      color: var(--text); font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    header { border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; background: #0b1020eF; backdrop-filter: blur(14px); }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 750; letter-spacing: -.03em; text-decoration: none; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; gap: 24px; flex-wrap: wrap; }
+    .navlinks a { color: var(--muted); font-size: .92rem; text-decoration: none; }
+    .navlinks a:hover, .textlink:hover { color: var(--accent); }
+    .hero { padding: 100px 0 80px; }
+    .eyebrow { color: var(--accent); font-size: .82rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { max-width: 850px; margin: 16px 0; font-size: clamp(2.8rem, 7vw, 5.5rem); line-height: 1.02; letter-spacing: -.065em; }
+    h1 span { color: var(--accent2); }
+    .intro { max-width: 680px; color: var(--muted); font-size: 1.15rem; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 10px; border: 1px solid var(--line); text-decoration: none; font-weight: 700; }
+    .button.primary { background: var(--accent); color: #08121b; border-color: var(--accent); }
+    .button:hover { transform: translateY(-1px); }
+    section { padding: 54px 0; }
+    .section-head { margin-bottom: 24px; }
+    .section-head h2 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.4rem); letter-spacing: -.04em; }
+    .section-head p { margin: 8px 0 0; color: var(--muted); max-width: 700px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card { background: linear-gradient(145deg, #142039, #10182a); border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+    .card h3 { margin: 8px 0; font-size: 1.25rem; }
+    .card p { color: var(--muted); margin: 0 0 16px; }
+    .tagrow { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 18px; }
+    .tag { font-size: .78rem; color: #dce8ff; border: 1px solid #344565; background: #1a2944; padding: 4px 9px; border-radius: 999px; }
+    .textlink { color: var(--accent); text-decoration: none; font-weight: 700; }
+    .status { color: var(--accent2); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .skillgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .skill { border: 1px solid var(--line); border-radius: 14px; padding: 18px; background: #10182a; }
+    .skill strong { display: block; margin-bottom: 5px; }
+    .skill span { color: var(--muted); font-size: .92rem; }
+    .aboutbox { display: grid; grid-template-columns: 1.3fr .7fr; gap: 18px; }
+    .aboutbox p { color: var(--muted); margin-top: 0; }
+    .contact { background: linear-gradient(120deg, #14243a, #111a2e); border: 1px solid var(--line); border-radius: 20px; padding: clamp(24px, 5vw, 42px); }
+    footer { border-top: 1px solid var(--line); color: var(--muted); padding: 26px 0 36px; font-size: .9rem; }
+    .smallnote { font-size: .85rem; color: var(--muted); }
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      nav { align-items: flex-start; flex-direction: column; padding: 16px 0; }
+      .navlinks { gap: 14px; }
+      .hero { padding: 68px 0 48px; }
+      .grid, .skillgrid, .aboutbox { grid-template-columns: 1fr; }
+      section { padding: 38px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">VINOD<span>.</span></a>
+      <div class="navlinks">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="home">
+      <div class="eyebrow">QA • Python • Django</div>
+      <h1>Building reliable software.<br><span>Testing what matters.</span></h1>
+      <p class="intro">I'm Vinod Vyash, a software professional focused on quality assurance and Python backend development. I enjoy turning requirements into clear test cases, investigating failures, and building practical applications.</p>
+      <div class="actions">
+        <a class="button primary" href="#projects">Explore my projects</a>
+        <a class="button" href="https://github.com/VINODvyash" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a>
+        <a class="button" href="mailto:vinodvyash48@gmail.com">Email me</a>
+      </div>
+    </section>
+
+    <section class="wrap" id="projects">
+      <div class="section-head">
+        <h2>Selected projects</h2>
+        <p>Hands-on work across backend development and software testing. Project status is shown clearly.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="status">Backend project</div>
+          <h3>FlatDekhao</h3>
+          <p>A rental-property platform built with Django REST Framework. The backend includes user roles, property listings, filtering, favorites, and owner-focused endpoints.</p>
+          <div class="tagrow"><span class="tag">Python</span><span class="tag">Django REST Framework</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">JWT</span></div>
+          <a class="textlink" href="https://github.com/VINODvyash" target="_blank" rel="noopener noreferrer">View GitHub profile for project code ↗</a>
+        </article>
+        <article class="card">
+          <div class="status">In progress</div>
+          <h3>AI Test Failure Analyser</h3>
+          <p>A learning project exploring how AI can help interpret automated test failures, summarize useful evidence, and make debugging more understandable.</p>
+          <div class="tagrow"><span class="tag">Python</span><span class="tag">Pytest</span><span class="tag">Test analysis</span><span class="tag">AI-assisted debugging</span></div>
+          <a class="textlink" href="https://github.com/VINODvyash" target="_blank" rel="noopener noreferrer">View GitHub profile ↗</a>
+        </article>
+      </div>
+      <p class="smallnote">Add direct repository links to each project card once the repositories are public.</p>
+    </section>
+
+    <section class="wrap" id="skills">
+      <div class="section-head">
+        <h2>Skills & tools</h2>
+        <p>Practical areas I’m developing and applying through projects and interview preparation.</p>
+      </div>
+      <div class="skillgrid">
+        <div class="skill"><strong>Quality Assurance</strong><span>Test cases, functional testing, defect reporting, regression testing</span></div>
+        <div class="skill"><strong>Automation & API</strong><span>Python, Pytest, Selenium, Postman</span></div>
+        <div class="skill"><strong>Backend development</strong><span>Django REST Framework, REST APIs, JWT</span></div>
+        <div class="skill"><strong>Data & databases</strong><span>SQL, PostgreSQL</span></div>
+        <div class="skill"><strong>Development workflow</strong><span>Git, GitHub, Docker</span></div>
+        <div class="skill"><strong>Debugging</strong><span>Reproducing issues, reviewing test output, documenting findings</span></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="about">
+      <div class="section-head"><h2>About</h2></div>
+      <div class="aboutbox">
+        <div class="card">
+          <p>I’m interested in roles where careful testing, clear communication, and structured problem-solving help deliver dependable software. My project work combines backend development with a quality-focused approach.</p>
+          <p>I’m continuing to strengthen my automation and testing skills through hands-on practice and practical projects.</p>
+        </div>
+        <div class="card">
+          <div class="status">Education</div>
+          <h3>Master of Computer Applications</h3>
+          <p>Chandigarh University · 2023</p>
+          <div class="status">Focus</div>
+          <h3>QA & Python</h3>
+          <p>Software testing and backend projects</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="contact">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Let’s talk about quality and software.</h2>
+        <p class="intro">For job opportunities, referrals, or project discussions, feel free to reach out.</p>
+        <div class="actions">
+          <a class="button primary" href="mailto:vinodvyash48@gmail.com">vinodvyash48@gmail.com</a>
+          <a class="button" href="https://github.com/VINODvyash" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="button" href="https://www.linkedin.com/in/vinod-vyash-/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Vinod Vyash · Portfolio</div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
